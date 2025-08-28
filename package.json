@@ -1,0 +1,13 @@
+{
+  "name": "really-bad-tetris",
+  "version": "1.0.0",
+  "description": "really bad tetris - demo multiplayer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.8.1"
+  }
+}

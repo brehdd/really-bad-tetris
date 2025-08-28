@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>really bad tetris</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="menuBG" class="bg-canvas"></canvas>
+
+  <div id="homeMenu" class="menu-panel">
+    <h1>really bad tetris</h1>
+    <div class="menu-buttons">
+      <button id="btnSingle">singleplayer</button>
+      <button id="btnMulti">multiplayer</button>
+      <button id="btnSettings">settings</button>
+    </div>
+  </div>
+
+  <div id="gameWrap" class="hidden">
+    <canvas id="gameCanvas" width="300" height="600"></canvas>
+    <div id="comboEffect" class="combo"></div>
+    <div id="hud" class="hud">
+      <div id="playerRank">rank: -</div>
+      <div id="score">score: 0</div>
+      <div id="controls">
+        <label>username: <input id="username" value="player"></label>
+        <label>bg color: <input type="color" id="pf-bg" value="#071022"></label>
+        <button id="saveProfile">save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

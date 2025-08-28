@@ -1,0 +1,33 @@
+/* style.css - modern rounded, lowercase UI */
+:root{
+  --bg1:#0f0f1a; --bg2:#16162a; --panel: rgba(255,255,255,0.06);
+  --accent: #3dd3ff; --text:#e6eef8;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+html,body{height:100%;margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text)}
+.bg-canvas{position:fixed;inset:0;z-index:-1}
+.menu-panel{
+  position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:360px;padding:48px;border-radius:28px;background:var(--panel);
+  backdrop-filter: blur(12px);box-shadow:0 12px 40px rgba(0,0,0,0.45);text-align:center;
+}
+.menu-panel h1{margin:0 0 28px 0;font-size:44px;text-transform:lowercase}
+.menu-buttons{display:flex;flex-direction:column;gap:14px}
+.menu-buttons button{
+  padding:14px 18px;border-radius:22px;border:0;background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.14));
+  color:var(--text);font-weight:700;font-size:16px;cursor:pointer; text-transform:lowercase;
+}
+.menu-buttons button:hover{transform:scale(1.04);box-shadow:0 8px 20px rgba(0,0,0,0.45)}
+
+.hidden{display:none}
+#gameWrap{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:12px;align-items:flex-start}
+canvas#gameCanvas{background:#071022;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+.hud{margin-left:12px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.hud div{background:rgba(255,255,255,0.03);padding:8px;border-radius:12px;min-width:140px}
+.combo{
+  position:fixed;left:50%;top:44%;transform:translate(-50%,-50%);padding:8px 14px;border-radius:12px;
+  background:rgba(0,0,0,0.32);backdrop-filter: blur(6px); font-size:36px; display:none; text-transform:lowercase;
+}
+label{font-size:13px}
+input[type="color"]{height:28px;width:40px;border-radius:6px;border:0;vertical-align:middle}
+#playerRank, #score {font-weight:700}
